@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>B2 Unisex Salon | Ibadan</title>
+
+<meta name="description"
+content="B2 Unisex Salon — beauty, grooming and self-care in Mokola Hill, Ibadan.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+}
+
+body{
+    background:#0d0b09;
+    color:#f5efe6;
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+    --black:#0d0b09;
+    --dark:#15110e;
+    --cream:#f5efe6;
+    --muted:#a9a097;
+    --gold:#d6ad67;
+    --gold-light:#f0d39a;
+    --line:rgba(255,255,255,.10);
+}
+
+/* =====================================================
+   GRAIN EFFECT
+===================================================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999;
+    opacity:.035;
+
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    padding:18px 6%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(13,11,9,.68);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.logo{
+    font-family:"Playfair Display",serif;
+    font-size:22px;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:13px;
+    color:#d9d0c5;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold-light);
+}
+
+.nav-cta{
+    padding:11px 18px;
+    border:1px solid rgba(214,173,103,.6);
+    border-radius:100px;
+    color:var(--gold-light)!important;
+}
+
+.menu{
+    display:none;
+    border:1px solid rgba(255,255,255,.15);
+    background:transparent;
+    color:white;
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    font-size:21px;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:100svh;
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    padding:130px 6% 80px;
+
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    right:-180px;
+    top:20%;
+
+    background:rgba(214,173,103,.13);
+    filter:blur(100px);
+    border-radius:50%;
+}
+
+.hero-grid{
+    width:100%;
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+}
+
+.eyebrow::before{
+    content:"";
+    width:35px;
+    height:1px;
+    background:var(--gold);
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(55px,7vw,105px);
+    line-height:.94;
+    font-weight:500;
+    letter-spacing:-4px;
+
+    max-width:850px;
+}
+
+.hero h1 em{
+    color:var(--gold-light);
+    font-style:italic;
+}
+
+.hero-description{
+    color:var(--muted);
+    line-height:1.8;
+    max-width:500px;
+    margin:30px 0;
+    font-size:15px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:52px;
+    padding:0 23px;
+
+    border-radius:100px;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:#17120c;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 40px rgba(214,173,103,.25);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.18);
+    color:white;
+}
+
+.btn-outline:hover{
+    border-color:var(--gold);
+    color:var(--gold-light);
+}
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image-wrap{
+    position:relative;
+    max-width:520px;
+    margin:auto;
+}
+
+.hero-image{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+
+    border-radius:250px 250px 18px 18px;
+
+    filter:saturate(.82);
+}
+
+.image-border{
+    position:absolute;
+    inset:12px;
+
+    border:1px solid rgba(240,211,154,.5);
+    border-radius:240px 240px 14px 14px;
+
+    pointer-events:none;
+}
+
+.image-caption{
+    position:absolute;
+
+    bottom:25px;
+    left:25px;
+    right:25px;
+
+    padding:17px;
+
+    background:rgba(13,11,9,.72);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.image-caption span:first-child{
+    font-family:"Playfair Display",serif;
+    font-size:18px;
+}
+
+.image-caption span:last-child{
+    font-size:10px;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* =====================================================
+   MARQUEE
+===================================================== */
+
+.marquee{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+
+    padding:17px 0;
+
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.marquee-track{
+    display:inline-flex;
+    gap:35px;
+
+    animation:marquee 22s linear infinite;
+}
+
+.marquee span{
+    color:#837b73;
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.marquee .dot{
+    color:var(--gold);
+}
+
+@keyframes marquee{
+    from{transform:translateX(0)}
+    to{transform:translateX(-50%)}
+}
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section{
+    padding:110px 6%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-top{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:end;
+
+    margin-bottom:55px;
+}
+
+.section-label{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:10px;
+    margin-bottom:15px;
+}
+
+.section-title{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,5vw,70px);
+    font-weight:500;
+    line-height:1;
+}
+
+.section-copy{
+    max-width:430px;
+    color:var(--muted);
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+
+    border:1px solid var(--line);
+    background:var(--line);
+}
+
+.service{
+    min-height:280px;
+    padding:35px;
+
+    background:var(--dark);
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.service::after{
+    content:"";
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    right:-80px;
+    bottom:-80px;
+
+    background:var(--gold);
+    opacity:.07;
+
+    border-radius:50%;
+    transition:.5s;
+}
+
+.service:hover{
+    background:#1a1511;
+    transform:translateY(-5px);
+}
+
+.service:hover::after{
+    transform:scale(2);
+}
+
+.service-number{
+    color:#625a52;
+    font-size:12px;
+}
+
+.service h3{
+    font-family:"Playfair Display",serif;
+    font-size:29px;
+    font-weight:500;
+    margin-top:70px;
+}
+
+.service p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
+    margin-top:12px;
+}
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery{
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr .8fr;
+    grid-template-rows:300px 300px;
+
+    gap:10px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:5px;
+}
+
+.gallery-item:first-child{
+    grid-row:span 2;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:transform .8s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.07);
+}
+
+.gallery-item::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.45),
+        transparent 50%
+    );
+}
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about-image{
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.about-text h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(42px,5vw,68px);
+    font-weight:500;
+    line-height:1.05;
+}
+
+.about-text h2 span{
+    color:var(--gold-light);
+    font-style:italic;
+}
+
+.about-text p{
+    color:var(--muted);
+    line-height:1.9;
+    margin-top:25px;
+    font-size:15px;
+}
+
+.about-note{
+    margin-top:30px;
+    padding:20px;
+
+    border-left:1px solid var(--gold);
+
+    color:#d7cec2;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* =====================================================
+   REVIEW
+===================================================== */
+
+.review-section{
+    background:#12100d;
+}
+
+.rating{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.rating-number{
+    font-family:"Playfair Display",serif;
+    font-size:75px;
+    color:var(--gold-light);
+}
+
+.stars{
+    color:var(--gold);
+    letter-spacing:3px;
+}
+
+.review-card{
+    max-width:850px;
+    margin:auto;
+
+    padding:50px;
+
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.025);
+
+    text-align:center;
+}
+
+.review-mark{
+    font-family:"Playfair Display",serif;
+    color:var(--gold);
+    font-size:60px;
+}
+
+.review-card blockquote{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(25px,4vw,43px);
+    line-height:1.25;
+}
+
+.review-meta{
+    margin-top:25px;
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.location-card{
+    border:1px solid var(--line);
+    padding:40px;
+    background:#11100e;
+}
+
+.location-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:32px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+.location-card p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+.location-card a{
+    color:var(--gold-light);
+}
+
+.map{
+    min-height:360px;
+
+    background:
+    linear-gradient(
+        rgba(13,11,9,.25),
+        rgba(13,11,9,.7)
+    ),
+    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80")
+    center/cover;
+
+    display:flex;
+    align-items:end;
+
+    padding:25px;
+}
+
+.map-button{
+    background:var(--cream);
+    color:#111;
+    padding:14px 20px;
+    border-radius:100px;
+    font-size:12px;
+    font-weight:700;
+}
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.final-cta{
+    text-align:center;
+    padding:150px 6%;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.final-cta::before{
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    background:rgba(214,173,103,.10);
+
+    filter:blur(100px);
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+}
+
+.final-cta > *{
+    position:relative;
+}
+
+.final-cta h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(50px,8vw,100px);
+    line-height:.95;
+    font-weight:500;
+}
+
+.final-cta h2 em{
+    color:var(--gold-light);
+}
+
+.final-cta p{
+    color:var(--muted);
+    max-width:450px;
+    margin:25px auto 35px;
+    line-height:1.7;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:40px 6% 110px;
+    border-top:1px solid var(--line);
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.footer-logo{
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+}
+
+.footer-copy{
+    color:#77716b;
+    font-size:12px;
+    margin-top:10px;
+}
+
+.footer-links{
+    display:flex;
+    gap:20px;
+}
+
+.footer-links a{
+    font-size:12px;
+    color:#aaa29a;
+}
+
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
+
+.whatsapp{
+    position:fixed;
+
+    right:18px;
+    bottom:82px;
+
+    width:57px;
+    height:57px;
+
+    border-radius:50%;
+
+    background:#25D366;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:25px;
+
+    z-index:900;
+
+    box-shadow:0 10px 30px rgba(37,211,102,.25);
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* =====================================================
+   MOBILE ACTION BAR
+===================================================== */
+
+.mobile-bar{
+    display:none;
+}
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:opacity .8s ease, transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+    .nav{
+        padding:14px 18px;
+    }
+
+    .nav-links{
+        display:none;
+
+        position:absolute;
+        top:70px;
+        left:12px;
+        right:12px;
+
+        padding:15px;
+
+        background:#15110e;
+        border:1px solid var(--line);
+        border-radius:18px;
+
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+
+        box-shadow:0 25px 60px rgba(0,0,0,.45);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        display:block;
+        padding:15px;
+    }
+
+    .nav-cta{
+        text-align:center;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        padding:120px 18px 70px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .hero h1{
+        font-size:clamp(52px,15vw,80px);
+        letter-spacing:-3px;
+    }
+
+    .hero-image-wrap{
+        width:90%;
+    }
+
+    section{
+        padding:80px 18px;
+    }
+
+    .section-top{
+        display:block;
+        margin-bottom:35px;
+    }
+
+    .section-copy{
+        margin-top:20px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .service{
+        min-height:220px;
+    }
+
+    .service h3{
+        margin-top:45px;
+    }
+
+    .gallery{
+        display:flex;
+        overflow-x:auto;
+        scroll-snap-type:x mandatory;
+        gap:12px;
+
+        padding-bottom:8px;
+    }
+
+    .gallery-item,
+    .gallery-item:first-child{
+        flex:0 0 78vw;
+        height:430px;
+        scroll-snap-align:start;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .about-image{
+        max-height:500px;
+    }
+
+    .review-card{
+        padding:35px 20px;
+    }
+
+    .rating{
+        justify-content:center;
+    }
+
+    .location-grid{
+        grid-template-columns:1fr;
+    }
+
+    .map{
+        min-height:300px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+
+    .mobile-bar{
+        display:flex;
+
+        position:fixed;
+        bottom:0;
+        left:0;
+        width:100%;
+
+        z-index:800;
+
+        background:rgba(13,11,9,.94);
+        backdrop-filter:blur(18px);
+
+        border-top:1px solid var(--line);
+
+        padding:10px;
+        gap:8px;
+    }
+
+    .mobile-bar a{
+        flex:1;
+        text-align:center;
+
+        padding:13px 8px;
+
+        border-radius:100px;
+
+        font-size:11px;
+        font-weight:700;
+    }
+
+    .mobile-call{
+        border:1px solid rgba(255,255,255,.15);
+    }
+
+    .mobile-book{
+        background:var(--gold);
+        color:#15100b;
+    }
+
+    .whatsapp{
+        bottom:75px;
+        right:15px;
+    }
+}
+
+@media(max-width:480px){
+
+    .logo{
+        font-size:19px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero-description{
+        font-size:14px;
+    }
+
+    .hero-image-wrap{
+        width:100%;
+    }
+
+    .image-caption{
+        left:15px;
+        right:15px;
+        bottom:15px;
+    }
+
+    .section-title{
+        font-size:43px;
+    }
+
+    .service{
+        padding:27px;
+    }
+
+    .final-cta{
+        padding:110px 18px;
+    }
+
+    .final-cta h2{
+        font-size:57px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="nav">
+
+    <a href="#home" class="logo">
+        B2 <span>UNISEX</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#location">Location</a></li>
+
+        <li>
+            <a class="nav-cta"
+               href="https://wa.me/2349022492632?text=Hello%20B2%20Unisex%20Salon%2C%20I%27d%20like%20to%20make%20an%20appointment.">
+                Book Appointment
+            </a>
+        </li>
+
+    </ul>
+
+    <button class="menu" id="menuBtn">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-grid">
+
+        <div class="hero-content reveal">
+
+            <div class="eyebrow">
+                Mokola Hill · Ibadan
+            </div>
+
+            <h1>
+                Your look.
+                <em>Your statement.</em>
+            </h1>
+
+            <p class="hero-description">
+                B2 Unisex Salon is a beauty and grooming destination
+                in Ibadan designed around the details that make you
+                feel confident when you leave.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a class="btn btn-primary"
+                   href="https://wa.me/2349022492632?text=Hello%20B2%20Unisex%20Salon%2C%20I%27d%20like%20to%20make%20an%20appointment.">
+                    Book an Appointment →
+                </a>
+
+                <a class="btn btn-outline"
+                   href="#services">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image-wrap reveal">
+
+            <!-- CONCEPT IMAGE — replace with B2's real photo -->
+            <img
+                class="hero-image"
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85"
+                alt="Salon beauty concept"
+            >
+
+            <div class="image-border"></div>
+
+            <div class="image-caption">
+
+                <span>B2 Unisex Salon</span>
+
+                <span>Ibadan</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MARQUEE
+===================================================== -->
+
+<div class="marquee">
+
+    <div class="marquee-track">
+
+        <span>Beauty</span>
+        <span class="dot">✦</span>
+
+        <span>Hair</span>
+        <span class="dot">✦</span>
+
+        <span>Grooming</span>
+        <span class="dot">✦</span>
+
+        <span>Self Care</span>
+        <span class="dot">✦</span>
+
+        <span>B2 Unisex Salon</span>
+        <span class="dot">✦</span>
+
+        <span>Ibadan</span>
+        <span class="dot">✦</span>
+
+        <span>Beauty</span>
+        <span class="dot">✦</span>
+
+        <span>Hair</span>
+        <span class="dot">✦</span>
+
+        <span>Grooming</span>
+        <span class="dot">✦</span>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section id="services">
+
+<div class="container">
+
+    <div class="section-top reveal">
+
+        <div>
+
+            <div class="section-label">
+                What we do
+            </div>
+
+            <h2 class="section-title">
+                Beauty,<br>
+                <em>without compromise.</em>
+            </h2>
+
+        </div>
+
+        <p class="section-copy">
+            Public business listings associate B2 Unisex Salon
+            with a range of beauty, grooming and self-care categories.
+            Confirm exact service availability and pricing directly
+            with the salon before booking.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <article class="service reveal">
+
+            <span class="service-number">01</span>
+
+            <h3>Hair & Grooming</h3>
+
+            <p>
+                Salon and barber services are among the categories
+                publicly associated with B2.
+            </p>
+
+        </article>
+
+
+        <article class="service reveal">
+
+            <span class="service-number">02</span>
+
+            <h3>Nails & Foot Care</h3>
+
+            <p>
+                Nail and foot-care services are publicly listed,
+                including a customer review mentioning a pedicure.
+            </p>
+
+        </article>
+
+
+        <article class="service reveal">
+
+            <span class="service-number">03</span>
+
+            <h3>Beauty</h3>
+
+            <p>
+                Public listings also associate B2 with makeup,
+                eyelash and broader beauty services.
+            </p>
+
+        </article>
+
+
+        <article class="service reveal">
+
+            <span class="service-number">04</span>
+
+            <h3>Self Care</h3>
+
+            <p>
+                Massage is among the categories appearing in
+                public business listings.
+            </p>
+
+        </article>
+
+
+        <article class="service reveal">
+
+            <span class="service-number">05</span>
+
+            <h3>Unisex</h3>
+
+            <p>
+                A beauty destination designed around a unisex
+                salon identity.
+            </p>
+
+        </article>
+
+
+        <article class="service reveal">
+
+            <span class="service-number">06</span>
+
+            <h3>Your Look</h3>
+
+            <p>
+                Bring your idea, reference or occasion.
+                Confirm the exact service with B2 before booking.
+            </p>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section id="gallery">
+
+<div class="container">
+
+    <div class="section-top reveal">
+
+        <div>
+
+            <div class="section-label">
+                The visual experience
+            </div>
+
+            <h2 class="section-title">
+                See the<br>
+                <em>possibility.</em>
+            </h2>
+
+        </div>
+
+        <p class="section-copy">
+            A gallery is one of the strongest ways for a salon
+            to let prospective clients see its work before they
+            ever walk through the door.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <!-- Replace these concept images with B2's real work -->
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85"
+                alt="Salon interior concept"
+            >
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=85"
+                alt="Hair styling concept"
+            >
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85"
+                alt="Nail beauty concept"
+            >
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=85"
+                alt="Beauty portrait concept"
+            >
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=85"
+                alt="Salon styling concept"
+            >
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+<div class="container">
+
+    <div class="about-grid">
+
+        <div class="reveal">
+
+            <img
+                class="about-image"
+                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=85"
+                alt="Salon professional concept"
+            >
+
+        </div>
+
+
+        <div class="about-text reveal">
+
+            <div class="section-label">
+                About B2
+            </div>
+
+            <h2>
+                More than a salon.
+                <span>A moment for you.</span>
+            </h2>
+
+            <p>
+                B2 Unisex Salon is publicly listed at 22 Obasa Street,
+                Mokola Hill, Ibadan.
+            </p>
+
+            <p>
+                The salon's public business listings place it within
+                several beauty and grooming categories, giving clients
+                a convenient starting point for discovering its services.
+            </p>
+
+            <div class="about-note">
+
+                <strong>Good design starts with good information.</strong><br>
+
+                This concept intentionally avoids invented claims.
+                The final website should use B2's own photographs,
+                confirmed service list, confirmed hours and any
+                approved brand story supplied by the salon.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
+
+<section class="review-section" id="reviews">
+
+<div class="container">
+
+    <div class="review-card reveal">
+
+        <div class="rating">
+
+            <div class="rating-number">
+                4.9
+            </div>
+
+            <div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <small style="color:#8f8880;">
+                    Publicly listed rating
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="review-mark">
+            “
+        </div>
+
+        <blockquote>
+
+            A publicly listed customer praised the
+            pedicure experience, describing their feet
+            as soft and refreshed afterwards.
+
+        </blockquote>
+
+        <div class="review-meta">
+
+            Public review attribution:
+            Adewuyi Anjolaoluwa · February 18, 2026
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LOCATION
+===================================================== -->
+
+<section id="location">
+
+<div class="container">
+
+    <div class="section-top reveal">
+
+        <div>
+
+            <div class="section-label">
+                Find B2
+            </div>
+
+            <h2 class="section-title">
+                Come<br>
+                <em>through.</em>
+            </h2>
+
+        </div>
+
+        <p class="section-copy">
+            Ready when you are. Use the location below to get
+            directions or contact B2 directly before your visit.
+        </p>
+
+    </div>
+
+
+    <div class="location-grid">
+
+        <div class="location-card reveal">
+
+            <h3>
+                B2 Unisex Salon
+            </h3>
+
+            <p>
+
+                22 Obasa St,<br>
+                Mokola Hill,<br>
+                Ibadan 200212,<br>
+                Oyo, Nigeria.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                <strong>Phone</strong><br>
+
+                <a href="tel:+2349022492632">
+                    +234 902 249 2632
+                </a>
+
+            </p>
+
+            <br>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=B2+Unisex+Salon+22+Obasa+Street+Mokola+Hill+Ibadan"
+                target="_blank"
+                class="btn btn-outline"
+                style="margin-top:15px;"
+            >
+                Get Directions →
+            </a>
+
+        </div>
+
+
+        <div class="map reveal">
+
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=B2+Unisex+Salon+22+Obasa+Street+Mokola+Hill+Ibadan"
+                target="_blank"
+            >
+                Open in Google Maps
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final-cta">
+
+    <div class="reveal">
+
+        <div class="section-label">
+            Your next look
+        </div>
+
+        <h2>
+            Ready to<br>
+            <em>glow?</em>
+        </h2>
+
+        <p>
+            Start a conversation with B2 Unisex Salon
+            and confirm the service that's right for you.
+        </p>
+
+        <a
+            class="btn btn-primary"
+            href="https://wa.me/2349022492632?text=Hello%20B2%20Unisex%20Salon%2C%20I%27d%20like%20to%20make%20an%20appointment."
+        >
+            Book via WhatsApp →
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-inner">
+
+    <div>
+
+        <div class="footer-logo">
+            B2 <span style="color:var(--gold);">UNISEX</span>
+        </div>
+
+        <div class="footer-copy">
+            Mokola Hill · Ibadan · Nigeria
+        </div>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+
+    </div>
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/2349022492632?text=Hello%20B2%20Unisex%20Salon%2C%20I%27d%20like%20to%20make%20an%20appointment."
+    aria-label="Chat with B2 on WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- =====================================================
+     MOBILE CONTACT BAR
+===================================================== -->
+
+<div class="mobile-bar">
+
+    <a
+        href="tel:+2349022492632"
+        class="mobile-call"
+    >
+        Call B2
+    </a>
+
+    <a
+        href="https://wa.me/2349022492632?text=Hello%20B2%20Unisex%20Salon%2C%20I%27d%20like%20to%20make%20an%20appointment."
+        class="mobile-book"
+    >
+        WhatsApp
+    </a>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+    if(navLinks.classList.contains("active")){
+
+        menuBtn.textContent = "✕";
+
+    }else{
+
+        menuBtn.textContent = "☰";
+
+    }
+
+});
+
+
+/* CLOSE MENU AFTER CLICK */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuBtn.textContent = "☰";
+
+    });
+
+});
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+revealElements.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+/* =====================================================
+   NAV BACKGROUND ON SCROLL
+===================================================== */
+
+window.addEventListener("scroll", () => {
+
+    const nav =
+    document.querySelector(".nav");
+
+    if(window.scrollY > 40){
+
+        nav.style.background =
+        "rgba(13,11,9,.92)";
+
+    }else{
+
+        nav.style.background =
+        "rgba(13,11,9,.68)";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
